@@ -23,7 +23,7 @@ const Navbar = () => {
           }}
         >
           <img src={logoNoBackground} alt='logoNoBackground' className='w-9 h-9 object-contain'/>
-          <p className='text-white text text-[18px] font-bold cursor-pointer'>Casanova <span className='sm:block hidden'>| javascript mastery</span></p>
+          <p className='text-white text text-[18px] font-bold cursor-pointer flex'>Casanova &nbsp;<span className='sm:block hidden'>| JS mastery</span></p>
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
         {navLinks.map((link)=> (
@@ -59,7 +59,7 @@ const Navbar = () => {
               onClick={()=> {
                 setToggle(!Toggle);
                 setActive(link.title);
-                /*trying to fix broken hover effect*/
+                /*trying to fix broken hover effect if you take it out completely it will, but i still want it there*/
               }}
             >
             <a href={`#${link.id}`}>{link.title}</a>          
